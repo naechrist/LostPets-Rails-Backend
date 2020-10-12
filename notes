@@ -1,0 +1,14 @@
+Models: 
+    Pet Type
+        - has many pets 
+        - attributes:
+            - :name (string)
+        
+    Pet
+        - belongs to a pet type 
+        - attributes:
+            - :pet_type_id (integer)
+            - :name (string)
+            - :description (text)
+            - :location (string)
+            - :contact_number (integer)
