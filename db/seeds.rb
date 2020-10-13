@@ -10,4 +10,4 @@ pet_type = PetType.create(name: "Dog")
 pet_type_two = PetType.create(name: "Cat")
 
 pet = Pet.create(pet_type_id: 1, name: "Boo", description: "Very loving, black fur, doesn't bark, medium size, brown eyeballs.", location: "Louisville, Kentucky in MiddleTown", contact_number: 555-867-5309)
-pet_two = Pet.create(pet_type_id: 2, name: "Squish", description: "Green eyeballs, kind of fiesty, really scared, dark grey fur.", contact_number: 555-867-5309)
+pet_two = Pet.create(pet_type_id: 2, name: "Squish", description: "Green eyeballs, kind of fiesty, really scared, dark grey fur.", location: "the moon", contact_number: 555-867-5309)
