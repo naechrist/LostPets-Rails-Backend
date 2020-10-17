@@ -16,7 +16,7 @@ class Api::V1::PetsController < ApplicationController
     def create 
         @pet = @pet_type.pets.new(pet_params)
         if @pet.save
-            render json: @pet
+            render json: @pet_type
         else 
             render json: {error: 'Error creating pet'}
         end
@@ -24,7 +24,9 @@ class Api::V1::PetsController < ApplicationController
 
     def destroy
         @pet = Pet.find(params[:id])
-        @pet.destory 
+        @pet_type = PetType.find(@pet.pet_type_id)
+        @pet.destroy 
+        render json: @pet_type
     end 
 
     private
