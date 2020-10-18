@@ -1,10 +1,10 @@
 class Api::V1::PetsController < ApplicationController
-    # before_action :set_pet_type
+    before_action :set_pet_type
 
     # /api/v1/pet_types/1/pets
 
     def index 
-        @pets = Pet.all
+        @pets = @pet_type.pets 
         render json: @pets 
     end 
 
