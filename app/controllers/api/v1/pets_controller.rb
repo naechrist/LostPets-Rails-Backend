@@ -1,10 +1,10 @@
 class Api::V1::PetsController < ApplicationController
-    before_action :set_pet_type
+    # before_action :set_pet_type
 
     # /api/v1/pet_types/1/pets
 
     def index 
-        @pets = @pet_type.pets
+        @pets = Pet.all
         render json: @pets 
     end 
 
@@ -20,6 +20,10 @@ class Api::V1::PetsController < ApplicationController
         else 
             render json: {error: 'Error creating pet'}
         end
+    end 
+
+    def update 
+        binding.pry
     end 
 
     def destroy
