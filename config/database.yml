@@ -20,6 +20,6 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-production:
-  adapter: postresql
-  database: db/production
+# production:
+#   adapter: postresql
+#   database: db/production
